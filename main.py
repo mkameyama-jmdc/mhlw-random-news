@@ -8,7 +8,44 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # --- 設定 (GitHub Actionsの環境変数から読み込む) ---
 SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")
-KEYWORDS = ["PHR", "My Health Web", "Kencom", "JAHIS", "健保連"]
+KEYWORDS = {
+    "My Health Web": {
+        "aliases": [
+            "My Health Web",
+            "マイヘルスウェブ"
+        ]
+    },
+    "Kencom": {
+        "aliases": [
+            "Kencom",
+            "ケンコム"
+        ]
+    },
+    "JAHIS": {
+        "aliases": [
+            "JAHIS",
+            "一般社団法人保健医療福祉情報システム工業会"
+        ]
+    },
+    "健保連": {
+        "aliases": [
+            "健保連",
+            "健康保険組合連合会"
+        ]
+    },
+    "PHR": {
+        "aliases": [
+            "PHR"
+        ]
+    },
+    "一般社団法人PHR普及推進協議会": {
+        "aliases": []
+    },
+    "PHRサービス事業協会": {
+        "aliases": []
+    }
+}
+
 HISTORY_FILE = "post_history.txt"
 
 TARGET_SITES = [
