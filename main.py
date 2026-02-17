@@ -8,49 +8,30 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # --- 設定 (GitHub Actionsの環境変数から読み込む) ---
 SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")
-KEYWORDS = {
-    "My Health Web": {
-        "aliases": [
-            "My Health Web",
-            "マイヘルスウェブ"
-        ]
-    },
-    "Kencom": {
-        "aliases": [
-            "Kencom",
-            "ケンコム"
-        ]
-    },
-    "JAHIS": {
-        "aliases": [
-            "JAHIS",
-            "一般社団法人保健医療福祉情報システム工業会"
-        ]
-    },
-    "健保連": {
-        "aliases": [
-            "健保連",
-            "健康保険組合連合会"
-        ]
-    },
-    "PHR": {
-        "aliases": [
-            "PHR"
-        ]
-    },
-    "一般社団法人PHR普及推進協議会": {
-        "aliases": []
-    },
-    "PHRサービス事業協会": {
-        "aliases": []
-    }
-}
+KEYWORDS = [
+    "My Health Web",
+    "マイヘルスウェブ",
+    "Kencom",
+    "ケンコム",
+    "JAHIS",
+    "一般社団法人保健医療福祉情報システム工業会",
+    "健保連",
+    "健康保険組合連合会",
+    "PHR",
+    "一般社団法人PHR普及推進協議会",
+    "PHRサービス事業協会",
+    "マイナポータル",
+    "マイナ保険証",
+    "医療DX"
+]
 
 HISTORY_FILE = "post_history.txt"
 
 TARGET_SITES = [
     {"name": "厚労省", "url": "https://www.mhlw.go.jp/stf/new-info/index.html"},
-    {"name": "デジタル庁", "url": "https://digital-agency-news.digital.go.jp/"}
+    {"name": "デジタル庁", "url": "https://digital-agency-news.digital.go.jp/"},
+    {"name": "総務省", "url": "https://www.soumu.go.jp/menu_news/s-news/index.html"},
+    {"name": "経産省", "url": "https://www.meti.go.jp/press/category/04.html"}
 ]
 # ----------------------------------------------
 
