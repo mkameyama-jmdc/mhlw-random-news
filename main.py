@@ -29,7 +29,7 @@ HISTORY_FILE = "post_history.txt"
 
 TARGET_SITES = [
     {"name": "厚労省", "url": "https://www.mhlw.go.jp/stf/new-info/index.html"},
-    {"name": "デジタル庁", "url": "https://digital-agency-news.digital.go.jp/"},
+    {"name": "デジタル庁", "url": "https://www.digital.go.jp/news"},
     {"name": "総務省", "url": "https://www.soumu.go.jp/menu_news/s-news/index.html"},
     {"name": "経産省", "url": "https://www.meti.go.jp/press/category/04.html"}
 ]
