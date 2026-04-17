@@ -87,7 +87,7 @@ def check_site(site_info, posted_urls):
             if is_match:
                 payload = {"text": f"【{name} 新着】\n{title}\n{full_url}"}
                 # Slack通知
-                # res = requests.post(SLACK_WEBHOOK_URL, json=payload, verify=False)
+                res = requests.post(SLACK_WEBHOOK_URL, json=payload, verify=False)
                 
                 if res.status_code == 200:
                     save_history(full_url)
