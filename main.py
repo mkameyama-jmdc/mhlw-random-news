@@ -33,6 +33,7 @@ TARGET_SITES = [
     {"name": "デジタル庁", "url": "https://digital-agency-news.digital.go.jp/", "filter_required": True, "selector": "a"},
     {"name": "総務省", "url": "https://www.soumu.go.jp/menu_news/s-news/index.html", "filter_required": True, "selector": "a"},
     {"name": "経産省", "url": "https://www.meti.go.jp/press/category/04.html", "filter_required": True, "selector": "a"},
+    
     # 人間ドック学会: キーワード不要(False)、かつ table-newslist 内の aタグのみを取得
     {
         "name": "日本人間ドック・予防医療学会", 
@@ -40,6 +41,26 @@ TARGET_SITES = [
         "filter_required": False, 
         "selector": ".table-newslist a" 
     }
+
+    # 競合サービス: Kencom を運営する DeSCヘルスケアのニュース一覧
+    # 会社名(DeSCヘルスケア)で判定すると、学会でのブース出展や研究受賞など
+    # PHR/kencomのサービス動向と関係ない社内広報まで拾ってしまうため、
+    # このサイトだけは "keywords" でkencom、アプリ関連の表記のみに絞って判定する
+    {
+        "name": "DeSCヘルスケア(Kencom)",
+        "url": "https://desc-hc.co.jp/archives/category/news",
+        "filter_required": True,
+        "selector": "a",
+        "keywords": ["kencom", "Kencom", "ケンコム", "アプリ"]
+    },
+ 
+    # 業界団体: 全国健康保険協会(協会けんぽ)のお知らせ一覧
+    {
+        "name": "全国健康保険協会(協会けんぽ)",
+        "url": "https://www.kyoukaikenpo.or.jp/news/index.html",
+        "filter_required": True,
+        "selector": "a"
+    },    
 ]
 # ----------------------------------------------
 
