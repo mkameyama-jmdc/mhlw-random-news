@@ -40,7 +40,7 @@ TARGET_SITES = [
         "url": "https://www.ningen-dock.jp/news_list/", 
         "filter_required": False, 
         "selector": ".table-newslist a" 
-    }
+    },
 
     # 競合サービス: Kencom を運営する DeSCヘルスケアのニュース一覧
     # 会社名(DeSCヘルスケア)で判定すると、学会でのブース出展や研究受賞など
